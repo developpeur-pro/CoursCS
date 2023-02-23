@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fonctions", "Fonctions\Fonc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chaines", "Chaines\Chaines.csproj", "{F7D5C8C6-A31B-480E-9AE8-613C0F671143}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatesDurées", "DatesDurées\DatesDurées.csproj", "{A461679E-F98C-4156-98C4-272D9C257782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatesDurées", "DatesDurées\DatesDurées.csproj", "{A461679E-F98C-4156-98C4-272D9C257782}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumérations", "Enumérations\Enumérations.csproj", "{C5614CFC-7050-457F-836F-970FAF6DE206}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A461679E-F98C-4156-98C4-272D9C257782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A461679E-F98C-4156-98C4-272D9C257782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A461679E-F98C-4156-98C4-272D9C257782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5614CFC-7050-457F-836F-970FAF6DE206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5614CFC-7050-457F-836F-970FAF6DE206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5614CFC-7050-457F-836F-970FAF6DE206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5614CFC-7050-457F-836F-970FAF6DE206}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
