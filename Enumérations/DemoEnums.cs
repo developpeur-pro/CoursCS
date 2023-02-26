@@ -33,18 +33,33 @@ namespace Enumérations
 			}
 
 			Console.WriteLine($"Aujourd'hui c'est {dt:dddd}");
-			Console.WriteLine($"Aujourd'hui c'est {dt.DayOfWeek}");
-
 			Console.WriteLine(message);
+			Console.WriteLine();
 		}
 
-		public static void TesterEnumsPerso()
+		public static void TesterItérationEnum()
 		{
-			
-			
-			// Affiche le libellé défini dans l'attribut Description d'une valeur énumérée
-			Feux f = Feux.Green;
-			Console.WriteLine(f.GetDescription());
+			string[] couleurs = { "Noir", "Bleu foncé", "Vert foncé", "Cyan foncé", "Rouge foncé", "Magenta foncé", "Jaune foncé",
+						"Gris", "Gris foncé", "Bleu", "Vert", "Cyan", "Rouge", "Magenta", "Jaune", "Blanc"};
+
+			// Mémorisation de la couleur de police d'origine
+			ConsoleColor couleurOrig = Console.ForegroundColor;
+
+			// Parcours des couleurs possibles
+			for (ConsoleColor c = ConsoleColor.Black; c <= ConsoleColor.White; c++)
+			{
+				Console.ForegroundColor = c;
+				Console.WriteLine($"  {c:D} : {c}");
+			}
+
+			foreach (ConsoleColor c in Enum.GetValues(typeof(ConsoleColor)))
+			{
+				Console.ForegroundColor = c;
+				Console.WriteLine($"  {c:D} : {couleurs[((int)c)]}");
+			}
+
+			// Restauration de la couleur d'origine
+			Console.ForegroundColor = couleurOrig;
 		}
 	}
 }
