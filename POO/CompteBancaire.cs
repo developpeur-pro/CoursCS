@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,8 @@ namespace POO
 		private static decimal _tauxAgios;
 
 		#region Propriétés publiques
-		public required long Numero { get; set; }
-		public DateOnly DateCreation { get; set; }
+		public long Numero { get; }
+		public DateOnly DateCreation { get; init; }
 		public string Libelle { get; set; } = string.Empty;
 		public decimal Solde { get; private set; }
 		#endregion
@@ -22,9 +23,9 @@ namespace POO
 		#region Constructeurs
 		public CompteBancaire()
 		{
+
 		}
 
-		[SetsRequiredMembers]
 		public CompteBancaire(long numero)
 		{
 			Numero = numero;
@@ -32,13 +33,11 @@ namespace POO
 			Libelle = $"Compte N°{numero}";
 		}
 
-		[SetsRequiredMembers]
 		public CompteBancaire(long numero, DateOnly dateCreation) : this(numero)
 		{
 			DateCreation = dateCreation;
 		}
 
-		[SetsRequiredMembers]
 		public CompteBancaire(long numero, DateOnly dateCreation, string libelle) :
 			this(numero, dateCreation)
 		{
@@ -91,14 +90,8 @@ namespace POO
 	public class Client
 	{
 		public required string Nom { get; set; } = string.Empty;
-		public string Prenom { get; set; } = string.Empty;
+		public required string Prenom { get; set; } = string.Empty;
 
 		public string NomComplet => $"{Nom} {Prenom}";
-
-		[SetsRequiredMembers]
-		public Client(string nom)
-		{
-			Nom = nom;
-		}
 	}
 }

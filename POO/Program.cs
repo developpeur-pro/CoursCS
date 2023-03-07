@@ -23,19 +23,21 @@ namespace POO
 
 			CompteBancaire cpt3 = new CompteBancaire(8563214);
 			// Initialisation des propriétés en lecture / écriture sans constucteur, ni initialiseur
-			cpt3.DateCreation = new DateOnly(2030, 10, 15);
+			//cpt3.DateCreation = new DateOnly(2030, 10, 15);
 			cpt3.Libelle = "Compte courant";
 
 			// Constructeur avec 3 paramètres
 			CompteBancaire cpt4 = new CompteBancaire(8563214, new DateOnly(2030, 10, 15), "azerty");
 
 			// Initialiseur
-			CompteBancaire cpt5 = new CompteBancaire {
-				Numero = 456465,
+			CompteBancaire cpt5 = new CompteBancaire
+			{
 				DateCreation = new DateOnly(2030, 10, 15),
 				Libelle = "dsfsdf"
 			};
 
+			// Propriétés requises dans les initialiseurs
+			Client c = new Client{ Nom = "Dupont ", Prenom = "Eric" };
 		}
 	}
 }
