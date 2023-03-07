@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chaines", "Chaines\Chaines.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatesDurées", "DatesDurées\DatesDurées.csproj", "{A461679E-F98C-4156-98C4-272D9C257782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumérations", "Enumérations\Enumérations.csproj", "{C5614CFC-7050-457F-836F-970FAF6DE206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumérations", "Enumérations\Enumérations.csproj", "{C5614CFC-7050-457F-836F-970FAF6DE206}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{4D5EA1A4-E8AE-441C-9119-76EB89BCA03D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C5614CFC-7050-457F-836F-970FAF6DE206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5614CFC-7050-457F-836F-970FAF6DE206}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5614CFC-7050-457F-836F-970FAF6DE206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D5EA1A4-E8AE-441C-9119-76EB89BCA03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D5EA1A4-E8AE-441C-9119-76EB89BCA03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D5EA1A4-E8AE-441C-9119-76EB89BCA03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D5EA1A4-E8AE-441C-9119-76EB89BCA03D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
