@@ -21,11 +21,6 @@ namespace POO
 		#endregion
 
 		#region Constructeurs
-		public CompteBancaire()
-		{
-
-		}
-
 		public CompteBancaire(long numero)
 		{
 			Numero = numero;
