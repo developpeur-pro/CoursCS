@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO", "POO\POO.csproj", "{4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO2", "POO2\POO2.csproj", "{8B388588-CC20-4929-94D5-B9A55A916D2B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypesValeurRef", "TypesValeurRef\TypesValeurRef.csproj", "{98995FF9-6F0A-4F4D-83C9-72E06751A89F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8B388588-CC20-4929-94D5-B9A55A916D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B388588-CC20-4929-94D5-B9A55A916D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B388588-CC20-4929-94D5-B9A55A916D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98995FF9-6F0A-4F4D-83C9-72E06751A89F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98995FF9-6F0A-4F4D-83C9-72E06751A89F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98995FF9-6F0A-4F4D-83C9-72E06751A89F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98995FF9-6F0A-4F4D-83C9-72E06751A89F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
