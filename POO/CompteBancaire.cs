@@ -1,23 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace POO
+﻿namespace POO
 {
-	internal class CompteBancaire
+	public class CompteBancaire
 	{
-		private const decimal PLAFOND_MAXI = 1000m;
-		private static decimal _tauxAgios;
-
 		#region Propriétés publiques
 		public long Numero { get; }
 		public DateOnly DateCreation { get; init; }
 		public string Libelle { get; set; } = string.Empty;
 		public decimal Solde { get; private set; }
+		public List<Operation> Operations { get; }
+		public decimal DecouvertMaxiAutorisé { get; set; } = -1000m;
 		#endregion
 
 		#region Constructeurs
@@ -26,6 +17,7 @@ namespace POO
 			Numero = numero;
 			DateCreation = DateOnly.FromDateTime(DateTime.Today);
 			Libelle = $"Compte N°{numero}";
+			Operations = new();
 		}
 
 		public CompteBancaire(long numero, DateOnly dateCreation) : this(numero)
@@ -44,49 +36,31 @@ namespace POO
 		public void Crediter(decimal montant)
 		{
 			Solde += montant;
+			Operations.Add(new Operation(montant));
 		}
 
 		// Méthode non statique
 		public void Debiter(decimal montant)
 		{
+			if (Solde - montant < DecouvertMaxiAutorisé)
+				throw new ArgumentOutOfRangeException($"Débit refusé car au-delà du découvert maximum de {DecouvertMaxiAutorisé:C}");
+
 			Solde -= montant;
-			if (Solde < 0)
-				Solde -= Solde * _tauxAgios; // Utilisation du champ statique OK
+			Operations.Add(new Operation(-montant));
 		}
 
 		public void Debiter(decimal montant, string libelle)
 		{
 			Debiter(montant);
-			// ...code supplémentaire gérant le libellé
+			Operations[Operations.Count - 1].Libelle = libelle;
 		}
 
 		public void Debiter(decimal montant, string libelle, DateOnly dateEffet)
 		{
 			Debiter(montant, libelle);
-			// ...code supplémentaire gérant la date d'effet
+			Operations[Operations.Count - 1].Date = dateEffet;
 		}
 
-		// Méthode statique
-		public static void ModifierTauxAgios(decimal taux)
-		{
-			_tauxAgios = taux; // accès au champ statique OK
-			//Libelle = "COMPTE"; // accès à la propriété non statique pas OK
-		}
 		#endregion
-
-		protected virtual decimal CalculerInterets()
-		{
-			decimal interets = Solde * 0.005m;
-			Solde += interets;
-			return interets;
-		}
-	}
-
-	public class Client
-	{
-		public required string Nom { get; set; } = string.Empty;
-		public required string Prenom { get; set; } = string.Empty;
-
-		public string NomComplet => $"{Nom} {Prenom}";
 	}
 }

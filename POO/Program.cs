@@ -40,4 +40,12 @@ namespace POO
 			Client c = new Client{ Nom = "Dupont ", Prenom = "Eric" };
 		}
 	}
+
+	public class Client
+	{
+		public required string Nom { get; set; } = string.Empty;
+		public required string Prenom { get; set; } = string.Empty;
+
+		public string NomComplet => $"{Nom} {Prenom}";
+	}
 }
