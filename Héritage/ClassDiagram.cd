@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Héritage.CompteBancaire">
+    <Position X="4" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgCAAAAAAAEAAAAAAgAACAAAAAAgASAAAQBAAA=</HashCode>
+      <FileName>CompteBancaire.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Operations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Héritage.CompteCourant">
+    <Position X="4" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAgAAAAAQAAAA=</HashCode>
+      <FileName>CompteCourant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Héritage.CompteEpargne">
+    <Position X="1" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAFAAAAIAAAAEAAAAAAkAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>CompteEpargne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Héritage.CompteTitres">
+    <Position X="7" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAIgAQAAAAAAEAAAAAAAAAAAAAAAAgAAAAAAIAAA=</HashCode>
+      <FileName>CompteTitres.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Portefeuille" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Héritage.Operation">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAgAAAAAAAAAAAAABAACAAAAAAAA=</HashCode>
+      <FileName>CompteBancaire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Héritage.Titre">
+    <Position X="10.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompteTitres.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

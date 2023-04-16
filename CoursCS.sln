@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypesValeurRef", "TypesVale
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsUnitaires", "TestsUnitaires\TestsUnitaires.csproj", "{7C266BDE-B4D9-4074-BC9E-16A79B3448B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Erreurs", "Erreurs\Erreurs.csproj", "{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erreurs", "Erreurs\Erreurs.csproj", "{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Héritage", "Héritage\Héritage.csproj", "{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
