@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestsUnitaires", "TestsUnit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Erreurs", "Erreurs\Erreurs.csproj", "{748E1CB7-CF8D-40DA-9D3A-9009C582DA9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Héritage", "Héritage\Héritage.csproj", "{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Héritage", "Héritage\Héritage.csproj", "{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces_DI", "Interfaces_DI\Interfaces_DI.csproj", "{A0D1750F-E539-417B-B503-1FE505F351A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E2A5FB-4503-4D3C-B3C7-266D5F56B162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0D1750F-E539-417B-B503-1FE505F351A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D1750F-E539-417B-B503-1FE505F351A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D1750F-E539-417B-B503-1FE505F351A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D1750F-E539-417B-B503-1FE505F351A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
