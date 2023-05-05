@@ -52,7 +52,7 @@ namespace Interfaces_DI
 			services.AddTransient<IEmailSender, EmailSender>();
 
 			// Construit le conteneur IoC
-			ServiceProvider = services.BuildServiceProvider();
+			ServiceProvider = services.BuildServiceProvider(true);
 		}
 
 		private static void TesterConteneurIoC()
