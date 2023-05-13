@@ -4,12 +4,17 @@
 	{
 		static void Main(string[] args)
 		{
-			TestLinq.Filtrer();
+			TestLinq.SélectionnerFiltrer();
 			//TestLinq.Trier();
+
 			//TestLinq.MinMax();
 			//TestLinq.CalculerAgrégats();
 			//TestLinq.Regrouper();
+			//TestLinq.SousRequetes();
 			//TestLinq.Transformer();
+
+			//TestLinq.OperationsEnsembles();
+			//TestLinq.Jointure();
 		}
 	}
 }

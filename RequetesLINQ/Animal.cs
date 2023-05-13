@@ -20,6 +20,7 @@
 		public Sexes Sexe { get; set; }
 		public string Nom { get; set; }
 		public DateTime? DateNais { get; set; }
+		public int? IdRace { get; set; }
 
 		public override string ToString()
 		{
@@ -27,4 +28,7 @@
 		}
 	}
 
+	public record class Race(int id, string nom);
+
+	public record class AnimalCompagnie(Especes espece, Sexes sexe, string nom);
 }
