@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequetesLINQ", "RequetesLIN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FichiersDossiers", "FichiersDossiers\FichiersDossiers.csproj", "{A947678A-A374-4370-8AD6-B510E8D1783A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DéléguésEvènements", "DéléguésEvènements\DéléguésEvènements.csproj", "{E79DF56E-BD7C-4121-8957-A8767219BBF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DéléguésEvènements", "DéléguésEvènements\DéléguésEvènements.csproj", "{E79DF56E-BD7C-4121-8957-A8767219BBF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgAsychrone", "ProgAsychrone\ProgAsychrone.csproj", "{AC63B7DE-3183-4E11-A814-4A35F1B1480F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{E79DF56E-BD7C-4121-8957-A8767219BBF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79DF56E-BD7C-4121-8957-A8767219BBF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79DF56E-BD7C-4121-8957-A8767219BBF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC63B7DE-3183-4E11-A814-4A35F1B1480F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC63B7DE-3183-4E11-A814-4A35F1B1480F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC63B7DE-3183-4E11-A814-4A35F1B1480F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC63B7DE-3183-4E11-A814-4A35F1B1480F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
