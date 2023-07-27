@@ -2,11 +2,13 @@
 
 namespace ClassesEtendues
 {
+	// Interface générique pour classes identifiables
 	public interface IIdentifiable<T>
 	{
 		public T Id { get; init; }
 	}
 
+	// Classe implémentant cette interface
 	public class Article : IIdentifiable<int>, IComparable<Article>
 	{
 		public int Id { get; init; }
@@ -18,6 +20,7 @@ namespace ClassesEtendues
 		}
 	}
 
+	// Classe générique pour des points du plan
 	public class Point<T> where T: ISignedNumber<T>
 	{
 		public T X { get; init; }
@@ -41,6 +44,7 @@ namespace ClassesEtendues
 			return Math.Sqrt(Convert.ToDouble(square));
 		}
 
+		// Méthode générique pour convertir les coordonnées d'un point dans un autre type
 		public Point<TDest> ConvertTo<TDest>() where TDest : ISignedNumber<TDest>
 		{
 			TDest x = (TDest)Convert.ChangeType(X, typeof(TDest));

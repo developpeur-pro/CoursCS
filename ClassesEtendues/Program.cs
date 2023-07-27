@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection;
+using System.Xml.Serialization;
 
 namespace ClassesEtendues
 {
@@ -7,7 +9,16 @@ namespace ClassesEtendues
 		static void Main(string[] args)
 		{
 			//TesterMethodesExtension();
-			//TesterGénériques();
+
+			//TesterAttributSerialisation();
+			//TesterAttributsValidation();
+
+			//AfficherInfosType();
+			//ListerMembresType();
+			//ListerValeursPropriétés();
+			//ListerAttributsDePropriété();
+
+			TesterGénériques();
 		}
 
 		static void TesterMethodesExtension()
@@ -15,13 +26,123 @@ namespace ClassesEtendues
 			string phrase = "J'aime le C#";
 			int nbMots = phrase.CountWords();
 			Console.WriteLine($"La phrase ({phrase}) comporte {nbMots} mots");
-			StringHelper.CountWords(phrase);
+			//int nbMots = StringHelper.CountWords(phrase);
+		}
 
-			int x = 3, y = 7;
-			string res = x.CompareToInString(y);
+		static void TesterAttributSerialisation()
+		{
+			XmlSerializer deserializer = new XmlSerializer(typeof(List<Voiture>),
+						 new XmlRootAttribute("Voitures"));
 
-			Console.WriteLine($"x {res} y");
-			Console.WriteLine($"x {x.CompareToInString(y)} y");
+			using FileStream fs = new FileStream("Voitures.xml", FileMode.Open);
+			List<Voiture>? voitures = deserializer.Deserialize(fs) as List<Voiture>;
+
+			if (voitures != null)
+			{
+				foreach (Voiture v in voitures)
+					Console.WriteLine($"{v.Id} : {v.Marque} {v.Modèle} de {v.Année}");
+			}
+		}
+
+		static void TesterAttributsValidation()
+		{
+			CompteUtil compte = new();
+
+			Console.WriteLine("Créez votre compte.");
+
+			GérerErreur(() =>
+			{
+				Console.WriteLine("\nPseudo :");
+				compte.Pseudo = Console.ReadLine() ?? "";
+			});
+
+			GérerErreur(() =>
+			{
+				Console.WriteLine("\nAdresse email :");
+				compte.Email = Console.ReadLine() ?? "";
+			});
+
+			GérerErreur(() =>
+			{
+				Console.WriteLine("\nMot de passe :");
+				compte.MotDePasse = Console.ReadLine() ?? "";
+			});
+
+			Console.WriteLine($"\nBienvenue {compte.Pseudo}, votre compte a bien été créé !");
+		}
+
+		// Gère l'affichage des erreurs de validation au cours d'une saisie
+		static void GérerErreur(Action saisie)
+		{
+			// On répète la saisie tant qu'elle n'est pas valide
+			bool erreur;
+			do
+			{
+				erreur = false;
+				try
+				{
+					saisie();
+				}
+				catch (ValidationException ve)
+				{
+					Console.WriteLine(ve.Message);
+					erreur = true;
+				}
+			} while (erreur);
+		}
+
+		static void AfficherInfosType()
+		{
+			Console.WriteLine("Infos du type :");
+			Type t1 = typeof(CompteUtil);
+			Console.WriteLine($"Espace de noms : {t1.Namespace}, nom : {t1.Name}");
+
+			Console.WriteLine("\nInfos du type à partir d'une instance :");
+			CompteUtil compte = new CompteUtil("eric_dup", "edup@free.fr", "Azerty1");
+			Type t2 = compte.GetType();
+			Console.WriteLine($"Espace de noms : {t2.Namespace}, nom : {t2.Name}");
+		}
+		
+		static void ListerMembresType()
+		{
+			// Liste des membres publics (type et nom) de la classe CompteUtil
+			Type t = typeof(CompteUtil);
+
+			Console.WriteLine($"Membres de {t.Name} :");
+			foreach (MemberInfo m in t.GetMembers())
+			{
+				Console.WriteLine($"Type: {m.MemberType}, Nom: {m.Name}");
+			}
+		}
+
+		static void ListerValeursPropriétés()
+		{			
+			CompteUtil compte = new CompteUtil("eric_dup", "edup@free.fr", "Azerty1");
+			PropertyInfo[] props = compte.GetType().GetProperties();
+
+			Console.WriteLine("Noms et valeurs des propriétés du compte :\n");
+			foreach (PropertyInfo p in props)
+			{
+				Console.WriteLine($"{p.Name} = {p.GetValue(compte)}");
+			}
+		}
+
+		static void ListerAttributsDePropriété()
+		{
+			CompteUtil compte = new CompteUtil("eric_dup", "edup@free.fr", "Azerty1");
+			PropertyInfo? prop = compte.GetType().GetProperty(nameof(compte.Pseudo));
+
+			if (prop == null) return;
+
+			Console.WriteLine($"Attributs de la propriété {prop.Name} :");
+
+			foreach (Attribute a in prop.GetCustomAttributes())
+			{				
+				if (a is StringLengthAttribute sla)
+					Console.WriteLine($"{sla.GetType().Name}({sla.MinimumLength})");
+				else
+					Console.WriteLine($"{a.GetType().Name}");
+			}
 		}
 
 		static void TesterGénériques()

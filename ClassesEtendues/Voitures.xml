@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Voitures>
+	<Voiture Id="1">
+		<Marque>Ferrari</Marque>
+		<Modele>458 Speciale A</Modele>
+		<Annee>2014</Annee>
+	</Voiture>
+	<Voiture Id="2">
+		<Marque>Ferrari</Marque>
+		<Modele>California 30</Modele>
+		<Annee>2012</Annee>
+	</Voiture>
+	<Voiture Id="3">
+		<Marque>Lamborghini</Marque>
+		<Modele>Aventador</Modele>
+		<Annee>2015</Annee>
+	</Voiture>
+	<Voiture Id="4">
+		<Marque>Lamborghini</Marque>
+		<Modele>Huracan</Modele>
+		<Annee>2014</Annee>
+	</Voiture>
+</Voitures>

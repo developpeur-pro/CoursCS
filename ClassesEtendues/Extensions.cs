@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-namespace ClassesEtendues
+﻿namespace ClassesEtendues
 {
 	// Extensions de la classe String
 	public static class StringHelper
@@ -9,31 +7,6 @@ namespace ClassesEtendues
 		{
 			string[] tabMots = s.Trim().Split(' ', '\'', '\t', '\n');
 			return tabMots.Length;
-		}
-
-	}
-
-	// Extensions de l'interface IComparable
-	public static class IComparableExtension
-	{
-		public static string CompareToInString(this IComparable comp, object obj)
-		{
-			int n = comp.CompareTo(obj);
-
-			if (n < 0) return "<";
-			if (n > 0) return ">";
-			return "=";
-		}
-
-		public static string CompareToInString<T>(this IComparable<T> comp, T other)
-		{
-			int res = comp.CompareTo(other);
-			return res switch
-			{
-				-1 => "<",
-				0 => "=",
-				_ => ">"
-			};
 		}
 	}
 
